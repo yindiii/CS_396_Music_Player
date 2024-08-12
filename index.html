@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="player">
+        <div class="details">
+            <img src="images/default.jpg" alt="Album Art" class="album-art">
+            <div class="info">
+                <h2 class="title">Song Title</h2>
+                <h3 class="artist">Artist Name</h3>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prev">Prev</button>
+            <button id="play">Play</button>
+            <button id="next">Next</button>
+            <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+        <ul class="playlist">
+            <!-- Playlist items will be dynamically inserted here -->
+        </ul>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
