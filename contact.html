@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player Hub</title>
+    <title>Contact - Music Player Hub</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -31,28 +31,27 @@
     </header>
     <main class="container my-4 main">
         <section class="hero text-center">
-            <img src="images/default.jpg" class="img-fluid" alt="Album Art">
-            <h1>Welcome to Music Player Hub!</h1>
-            <p>Your favorite music, all in one place.</p>
+            <h1>Contact Us</h1>
         </section>
-        <section class="player mt-4">
-            <div class="details">
-                <img src="images/default.jpg" alt="Album Art" class="album-art" id="album-art">
-                <div class="info">
-                    <h2 class="title" id="title">Song Title</h2>
-                    <h3 class="artist" id="artist">Artist Name</h3>
+        <section class="content mt-4">
+            <form action="mailto:contact@musicplayerhub.com" method="post" enctype="text/plain" class="bg-white p-4 rounded shadow-sm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control">
                 </div>
-            </div>
-            <div class="controls">
-                <button id="prev" class="control-button">⏮️</button>
-                <button id="play" class="control-button">▶️</button>
-                <button id="next" class="control-button">⏭️</button>
-                <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
-            </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
         </section>
     </main>
     <footer class="bg-dark text-white text-center py-3">
-        <a href="https://www.example.com" class="text-white">External Links</a> | 
         <a href="mailto:contact@musicplayerhub.com" class="text-white">Email Us</a> | 
         <a href="#top" class="text-white">Back to Top</a>
         <p>Follow us on social media!</p>
@@ -60,6 +59,6 @@
     <script src="scripts/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

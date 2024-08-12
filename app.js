@@ -1,4 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    const increaseFontButton = document.getElementById('increase-font');
+    const decreaseFontButton = document.getElementById('decrease-font');
+    const themeSwitcherButton = document.getElementById('theme-switcher');
+    const body = document.body;
+    let currentFontSize = 16;
+
+    increaseFontButton.addEventListener('click', function () {
+        currentFontSize += 2;
+        body.style.fontSize = currentFontSize + 'px';
+    });
+
+    decreaseFontButton.addEventListener('click', function () {
+        if (currentFontSize > 10) {
+            currentFontSize -= 2;
+            body.style.fontSize = currentFontSize + 'px';
+        }
+    });
+
+    themeSwitcherButton.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+    });
+
     const playButton = document.getElementById('play');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
@@ -13,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
             src: 'path/to/song1.mp3',
             title: 'Song Title 1',
             artist: 'Artist Name 1',
-            albumArt: 'path/to/album1.jpg'
+            albumArt: 'images/album1.jpg'
         },
         {
             src: 'path/to/song2.mp3',
             title: 'Song Title 2',
             artist: 'Artist Name 2',
-            albumArt: 'path/to/album2.jpg'
+            albumArt: 'images/album2.jpg'
         },
         // Add more songs here
     ];
@@ -41,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playlist.forEach((song, index) => {
             const li = document.createElement('li');
             li.textContent = `${song.title} - ${song.artist}`;
-            li.classList.add('playlist-item');
+            li.classList.add('list-group-item');
             if (index === currentSongIndex) {
                 li.classList.add('active');
             }
