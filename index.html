@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="player">
-        <div class="details">
-            <img src="images/default.jpg" alt="Album Art" class="album-art">
-            <div class="info">
-                <h2 class="title">Song Title</h2>
-                <h3 class="artist">Artist Name</h3>
+    <div class="container">
+        <div class="player">
+            <div class="details">
+                <img src="images/default.jpg" alt="Album Art" class="album-art" id="album-art">
+                <div class="info">
+                    <h2 class="title" id="title">Song Title</h2>
+                    <h3 class="artist" id="artist">Artist Name</h3>
+                </div>
             </div>
+            <div class="controls">
+                <button id="prev" class="control-button">⏮️</button>
+                <button id="play" class="control-button">▶️</button>
+                <button id="next" class="control-button">⏭️</button>
+                <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
+            </div>
+            <ul class="playlist" id="playlist">
+                <!-- Playlist items will be dynamically inserted here -->
+            </ul>
         </div>
-        <div class="controls">
-            <button id="prev">Prev</button>
-            <button id="play">Play</button>
-            <button id="next">Next</button>
-            <input type="range" id="volume" min="0" max="100" value="50">
-        </div>
-        <ul class="playlist">
-            <!-- Playlist items will be dynamically inserted here -->
-        </ul>
     </div>
     <script src="scripts/app.js"></script>
 </body>
