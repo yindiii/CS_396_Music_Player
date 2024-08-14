@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player Hub</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <header class="bg-dark text-white">
@@ -29,26 +30,19 @@
             </div>
         </nav>
     </header>
-    <main class="container my-4 main">
-        <section class="hero text-center">
-            <img src="images/default.jpg" class="img-fluid" alt="Album Art">
-            <h1>Welcome to Music Player Hub!</h1>
-            <p>Your favorite music, all in one place.</p>
-        </section>
-        <section class="player mt-4">
-            <div class="details">
-                <img src="images/default.jpg" alt="Album Art" class="album-art" id="album-art">
-                <div class="info">
-                    <h2 class="title" id="title">Song Title</h2>
-                    <h3 class="artist" id="artist">Artist Name</h3>
-                </div>
+    <main class="container my-4 main d-flex flex-column align-items-center">
+        <section class="player text-center">
+            <h2 class="title" id="title">Song Title</h2>
+            <h3 class="artist" id="artist">Artist Name</h3>
+            <div class="music-player">
+                <img src="assets/test.png" alt="Album Art" class="album-art">
+            </div>                
+            <div class="controls d-flex justify-content-center align-items-center mt-4">
+                <button id="prev" class="control-button mx-2">⏮️</button>
+                <button id="play" class="control-button mx-2">▶️</button>
+                <button id="next" class="control-button mx-2">⏭️</button>
             </div>
-            <div class="controls">
-                <button id="prev" class="control-button">⏮️</button>
-                <button id="play" class="control-button">▶️</button>
-                <button id="next" class="control-button">⏭️</button>
-                <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
-            </div>
+            Volume <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider mt-3"> 
         </section>
     </main>
     <footer class="bg-dark text-white text-center py-3">

@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,138 +15,65 @@ header {
     padding: 10px 0;
 }
 
-nav ul {
+.navbar-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
+.navbar-nav li {
     display: inline;
     margin-right: 15px;
 }
 
-nav ul li a {
+.nav-link {
     color: #fff;
     text-decoration: none;
 }
 
-.hero {
-    text-align: center;
-    padding: 20px;
-}
-
-.hero img {
-    max-width: 100%;
-    height: auto;
-}
 
 .main {
     flex: 1;
-    padding: 20px;
-    padding-bottom: 60px; 
-}
-
-.content {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 70px; 
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Ensures the main container spans the full width */
 }
 
-main {
-    flex: 1;
+.player {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;  /* This ensures the player section uses full width of the parent */
 }
 
-body {
-    font-size: 16px;
+.music-player {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-color: #ccc; /* You might want to remove/change this background color if not needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* This will make sure no part of the image sticks out of the circular boundary */
 }
 
-#increase-font, #decrease-font {
-    margin-left: 10px;
-}
 
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark-mode header, body.dark-mode footer {
-    background-color: #111;
-}
 
 .album-art {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; 
 }
 
-.player .details {
+.controls {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-.player .info {
-    text-align: left;
-}
-
-.player .controls {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .control-button {
@@ -156,18 +83,23 @@ body.dark-mode header, body.dark-mode footer {
     cursor: pointer;
 }
 
-.control-button:focus {
-    outline: none;
-}
-
 .volume-slider {
-    width: 100px;
+    width: 150px;
+    margin-top: 15px;
 }
 
-.playlist .list-group-item {
-    cursor: pointer;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.playlist .list-group-item:hover, .playlist .list-group-item.active {
-    background-color: #eee;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
