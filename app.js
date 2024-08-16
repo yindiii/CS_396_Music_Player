@@ -146,3 +146,31 @@ document.addEventListener("DOMContentLoaded", function() {
         body.style.fontSize = `${currentSize - 1}px`;
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeSwitcher = document.getElementById('theme-switcher');
+    let currentTheme = 'light'; // default theme
+
+    themeSwitcher.addEventListener('click', function() {
+        switch (currentTheme) {
+            case 'light':
+                currentTheme = 'dark';
+                document.body.classList.remove('light-theme');
+                document.body.classList.add('dark-theme');
+                break;
+            case 'dark':
+                currentTheme = 'high-contrast';
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('high-contrast-theme');
+                break;
+            case 'high-contrast':
+                currentTheme = 'light';
+                document.body.classList.remove('high-contrast-theme');
+                document.body.classList.add('light-theme');
+                break;
+        }
+    });
+
+    // Set initial theme
+    document.body.classList.add(currentTheme + '-theme');
+});

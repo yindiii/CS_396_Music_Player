@@ -1,6 +1,54 @@
+/* Light Theme */
+.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.light-theme header {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-theme footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+.dark-theme header {
+    background-color: #111;
+    color: #ddd;
+}
+
+.dark-theme footer {
+    background-color: #111;
+    color: #ddd;
+}
+
+/* High Contrast Theme */
+.high-contrast-theme {
+    background-color: #000;
+    color: #ff0;
+}
+
+.high-contrast-theme header {
+    background-color: #000;
+    color: #ff0;
+}
+
+.high-contrast-theme footer {
+    background-color: #000;
+    color: #ff0;
+}
+
+/* Common Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,42 +57,19 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-nav li {
-    display: inline;
-    margin-right: 15px;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-
 .main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;  /* Ensures the main container spans the full width */
+    width: 100%;
 }
 
 .player {
     text-align: center;
     max-width: 400px;
-    width: 100%;  /* This ensures the player section uses full width of the parent */
+    width: 100%;
 }
 
 .music-player {
@@ -52,14 +77,12 @@ header {
     height: 300px;
     border-radius: 50%;
     margin: 20px auto;
-    background-color: #ccc; /* You might want to remove/change this background color if not needed */
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* This will make sure no part of the image sticks out of the circular boundary */
+    overflow: hidden;
 }
-
-
 
 .album-art {
     width: 100%;
@@ -86,20 +109,4 @@ header {
 .volume-slider {
     width: 150px;
     margin-top: 15px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
