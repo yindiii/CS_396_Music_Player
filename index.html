@@ -17,8 +17,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="playlist.html">Playlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Player.html">Player</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -31,20 +31,33 @@
         </nav>
     </header>
     <main class="container my-4 main d-flex flex-column align-items-center">
-        <section class="player text-center">
-            <h2 class="title" id="title">Song Title</h2>
-            <h3 class="artist" id="artist">Artist Name</h3>
-            <div class="music-player">
-                <img src="assets/test.png" alt="Album Art" class="album-art">
-            </div>                
-            <div class="controls d-flex justify-content-center align-items-center mt-4">
-                <button id="prev" class="control-button mx-2">⏮️</button>
-                <button id="play" class="control-button mx-2">▶️</button>
-                <button id="next" class="control-button mx-2">⏭️</button>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <img src="path/to/genre1.jpg" class="img-fluid" alt="Genre 1 Image">
             </div>
-            Volume <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider mt-3"> 
-        </section>
-    </main>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="description">Genre 1 Description: This is a placeholder for the first music genre. Provide a brief description of what makes this genre unique and interesting.</p>
+            </div>
+        </div>
+    
+        <div class="row mb-5 flex-row-reverse">
+            <div class="col-md-6">
+                <img src="path/to/genre2.jpg" class="img-fluid" alt="Genre 2 Image">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="description">Genre 2 Description: This is a placeholder for the second music genre. Share some insights about this genre and its influence on the music scene.</p>
+            </div>
+        </div>
+    
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <img src="path/to/genre3.jpg" class="img-fluid" alt="Genre 3 Image">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="description">Genre 3 Description: This is a placeholder for the third music genre. Highlight what listeners can expect from this genre and why it’s worth exploring.</p>
+            </div>
+        </div>
+    </main>    
     <footer class="bg-dark text-white text-center py-3">
         <a href="https://www.example.com" class="text-white">External Links</a> | 
         <a href="mailto:contact@musicplayerhub.com" class="text-white">Email Us</a> | 

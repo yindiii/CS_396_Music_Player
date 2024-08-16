@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Music Player Hub</title>
+    <title>Music Player Hub</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <header class="bg-dark text-white">
@@ -29,19 +30,23 @@
             </div>
         </nav>
     </header>
-    <main class="container my-4 main">
-        <section class="hero text-center">
-            <h1>About Music Player Hub</h1>
-            <p>Learn more about our music player and its features.</p>
-        </section>
-        <section class="content mt-4">
-            <h2>Our Mission</h2>
-            <p>Our mission is to provide the best music listening experience.</p>
-            <h2>Features</h2>
-            <p>Our music player offers a range of features to enhance your listening experience.</p>
+    <main class="container my-4 main d-flex flex-column align-items-center">
+        <section class="player text-center">
+            <h2 class="title" id="title">Song Title</h2>
+            <h3 class="artist" id="artist">Artist Name</h3>
+            <div class="music-player">
+                <img src="assets/test.png" alt="Album Art" class="album-art">
+            </div>                
+            <div class="controls d-flex justify-content-center align-items-center mt-4">
+                <button id="prev" class="control-button mx-2">⏮️</button>
+                <button id="play" class="control-button mx-2">▶️</button>
+                <button id="next" class="control-button mx-2">⏭️</button>
+            </div>
+            Volume <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider mt-3"> 
         </section>
     </main>
     <footer class="bg-dark text-white text-center py-3">
+        <a href="https://www.example.com" class="text-white">External Links</a> | 
         <a href="mailto:contact@musicplayerhub.com" class="text-white">Email Us</a> | 
         <a href="#top" class="text-white">Back to Top</a>
         <p>Follow us on social media!</p>
@@ -49,6 +54,6 @@
     <script src="scripts/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
