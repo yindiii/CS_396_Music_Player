@@ -114,6 +114,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Music Player Setup
     const playButton = document.getElementById('play');
     const albumArt = document.querySelector('.album-art');
     let isPlaying = false;
@@ -130,8 +131,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     playButton.addEventListener('click', togglePlay);
+});
 
-    // Font size controls
+document.addEventListener("DOMContentLoaded", function() {
+    // Font Size Controls
     const increaseFontBtn = document.getElementById('increase-font');
     const decreaseFontBtn = document.getElementById('decrease-font');
     const body = document.body;
