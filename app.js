@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Classical',
             artist: 'Tchaikovsky',
             albumArt: 'assets/images/classical.jpg'
+        },
+        {
+            src: 'assets/music/pop.mp3',
+            title: 'Pop',
+            artist: 'Zutomayo',
+            albumArt: 'assets/images/pop.jpg'
         }
     ];
 
@@ -82,27 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Music Player Setup
-    const playButton = document.getElementById('play');
-    const albumArt = document.querySelector('.album-art');
-    let isPlaying = false;
-
-    function togglePlay() {
-        if (isPlaying) {
-            playButton.textContent = '▶️';
-            albumArt.style.animation = 'none'; 
-        } else {
-            playButton.textContent = '⏸️'; 
-            albumArt.style.animation = 'rotate 7.5s linear infinite'; 
-        }
-        isPlaying = !isPlaying;
-    }
-
-    playButton.addEventListener('click', togglePlay);
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Font Size Controls
     const increaseFontBtn = document.getElementById('increase-font');
     const decreaseFontBtn = document.getElementById('decrease-font');
     const body = document.body;
@@ -142,6 +127,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Set initial theme
     document.body.classList.add(currentTheme + '-theme');
 });
