@@ -1,5 +1,8 @@
 # Music Player Hub
 
+## Team Members
+Yindi Zhao, Kefan Yu
+
 ## Introduction
 Our mission is to provide the best music listening experience by delivering high-quality audio streaming with a seamless and user-friendly interface. We aim to make music discovery enjoyable and accessible to everyone.
 
